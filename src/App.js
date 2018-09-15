@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { increaseCounter, decreaseCounter } from './redux';
 
 class App extends Component {
   
@@ -27,4 +28,9 @@ const mapStateToProps = state => ({
   count: state
 });
 
-export default connect(mapStateToProps)(App);
+const mapDispatchToProps = dispatch => ({
+  onIncreaseCounter: () => dispatch(increaseCounter()),
+  onDecreaseCounter: () => dispatch(decreaseCounter()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
