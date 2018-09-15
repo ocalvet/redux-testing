@@ -36,4 +36,12 @@ describe('App', () => {
     wrapper.find('button').at(0).simulate('click');
     expect(onButtonClick).toHaveBeenCalled();
   });
+
+  it('should decrease counter', () => {
+    const onButtonClick = jest.fn();
+    const wrapper = shallow(<App onDecreaseCounter={onButtonClick} />);
+    console.debug(wrapper.find('button'));
+    wrapper.find('button').at(1).simulate('click');
+    expect(onButtonClick).toHaveBeenCalled();
+  });
 });
