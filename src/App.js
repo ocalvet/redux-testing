@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { increaseCounter, decreaseCounter } from './redux';
 
-class App extends Component {
+export class App extends Component {
   
   increaseCounter = () => {
     this.props.onIncreaseCounter();
