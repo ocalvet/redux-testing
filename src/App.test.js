@@ -25,7 +25,7 @@ describe('App', () => {
   });
 
   it('should have an element with the .App class', () => {
-    const { enzymeWrapper, props } = setup();
+    const { enzymeWrapper } = setup();
     expect(enzymeWrapper.find('.App').length).toBe(1);
   });
 
@@ -46,5 +46,11 @@ describe('App', () => {
   it('should show the correct count', () => {
     const wrapper = shallow(<App count={11} />);
     expect(wrapper.find('.title').text()).toEqual('Counter (11)');
+  });
+
+
+  it('should have a increase button', () => {
+    const { enzymeWrapper } = setup();
+    expect(enzymeWrapper.find('button').at(0).text()).toBe('Increase');
   });
 });
