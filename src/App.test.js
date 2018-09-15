@@ -53,4 +53,9 @@ describe('App', () => {
     const { enzymeWrapper } = setup();
     expect(enzymeWrapper.find('button').at(0).text()).toBe('Increase');
   });
+
+  it('should have a decrease button', () => {
+    const { enzymeWrapper } = setup();
+    expect(enzymeWrapper.find('button').at(1).text()).toBe('Decrease');
+  });
 });
