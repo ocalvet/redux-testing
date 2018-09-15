@@ -5,11 +5,11 @@ import { increaseCounter, decreaseCounter } from './redux';
 class App extends Component {
   
   increaseCounter = () => {
-    console.log('Increasing counter');
+    this.props.onIncreaseCounter();
   }
 
   decreaseCounter = () => {
-    console.log('Decreasing counter');
+    this.props.onDecreaseCounter();
   }
 
   render() {
@@ -29,8 +29,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  onIncreaseCounter: () => dispatch(increaseCounter()),
-  onDecreaseCounter: () => dispatch(decreaseCounter()),
+  onIncreaseCounter: () => dispatch(increaseCounter),
+  onDecreaseCounter: () => dispatch(decreaseCounter),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

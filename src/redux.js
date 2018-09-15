@@ -9,9 +9,9 @@ export const decreaseCounter = { type: DECREASE_COUNTER };
 export const counter = (state = 0, action) => {
   switch(action.type) {
     case INCREASE_COUNTER:
-      return state++;
+      return ++state;
     case DECREASE_COUNTER:
-      return state--;
+      return --state;
     default:
       return state
   }
