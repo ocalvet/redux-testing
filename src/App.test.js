@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount, shallow } from 'enzyme'
-import {App} from './App';
+import {App, mapDispatchToProps} from './App';
+import { increaseCounter, decreaseCounter } from './redux';
 
 const setup = () => {
   const props = {
@@ -57,5 +58,19 @@ describe('App', () => {
   it('should have a decrease button', () => {
     const { enzymeWrapper } = setup();
     expect(enzymeWrapper.find('button').at(1).text()).toBe('Decrease');
+  });
+
+  it('should call the dispatch function with increase counter', () => {
+    const mockDispatch = jest.fn();
+    const props = mapDispatchToProps(mockDispatch);
+    props.onIncreaseCounter();
+    expect(mockDispatch).toHaveBeenCalledWith(increaseCounter);
+  });
+
+  it('should call the dispatch function with decrease counter', () => {
+    const mockDispatch = jest.fn();
+    const props = mapDispatchToProps(mockDispatch);
+    props.onDecreaseCounter();
+    expect(mockDispatch).toHaveBeenCalledWith(decreaseCounter);
   });
 });

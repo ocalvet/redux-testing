@@ -24,11 +24,11 @@ export class App extends Component {
   }
 }
 
-const mapStateToProps = state => ({
+export const mapStateToProps = state => ({
   count: state
 });
 
-const mapDispatchToProps = dispatch => ({
+export const mapDispatchToProps = dispatch => ({
   onIncreaseCounter: () => dispatch(increaseCounter),
   onDecreaseCounter: () => dispatch(decreaseCounter),
 });
