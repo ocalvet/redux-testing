@@ -32,7 +32,6 @@ describe('App', () => {
   it('should increase counter', () => {
     const onButtonClick = jest.fn();
     const wrapper = shallow(<App onIncreaseCounter={onButtonClick} />);
-    console.debug(wrapper.find('button'));
     wrapper.find('button').at(0).simulate('click');
     expect(onButtonClick).toHaveBeenCalled();
   });
@@ -40,8 +39,12 @@ describe('App', () => {
   it('should decrease counter', () => {
     const onButtonClick = jest.fn();
     const wrapper = shallow(<App onDecreaseCounter={onButtonClick} />);
-    console.debug(wrapper.find('button'));
     wrapper.find('button').at(1).simulate('click');
     expect(onButtonClick).toHaveBeenCalled();
+  });
+
+  it('should show the correct count', () => {
+    const wrapper = shallow(<App count={11} />);
+    expect(wrapper.find('.title').text()).toEqual('Counter (11)');
   });
 });
