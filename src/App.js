@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { increaseCounter, decreaseCounter } from './redux';
+//@ Flow
 import styleClasses from './App.css';
 
 export class App extends Component {
