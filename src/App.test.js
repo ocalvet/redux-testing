@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount, shallow } from 'enzyme'
-import {App, mapDispatchToProps, mapStateToProps} from './App';
+import { App, mapDispatchToProps, mapStateToProps } from './App';
 import { increaseCounter, decreaseCounter } from './redux';
 
 const setup = () => {
@@ -73,8 +73,6 @@ describe('App', () => {
     props.onDecreaseCounter();
     expect(mockDispatch).toHaveBeenCalledWith(decreaseCounter);
   });
-
-
 
   it('should set the correct count prop when connecting to redux store', () => {
     const mockState = 10;

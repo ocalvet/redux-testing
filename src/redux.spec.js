@@ -1,4 +1,4 @@
-import { 
+import {
   increaseCounter,
   decreaseCounter,
   counter,
@@ -8,20 +8,20 @@ import {
 } from './redux';
 
 describe('redux', () => {
-  
-  it('should have the correct INCREASE_COUNTER constant',  () => {
+
+  it('should have the correct INCREASE_COUNTER constant', () => {
     expect(INCREASE_COUNTER).toEqual('INCREASE_COUNTER');
   });
 
-  it('should have the correct DECREASE_COUNTER constant',  () => {
+  it('should have the correct DECREASE_COUNTER constant', () => {
     expect(DECREASE_COUNTER).toEqual('DECREASE_COUNTER');
   });
 
-  it('should have create correct increase counter action',  () => {
+  it('should have create correct increase counter action', () => {
     expect(increaseCounter).toEqual({ type: INCREASE_COUNTER });
   });
 
-  it('should have create correct decrease counter action',  () => {
+  it('should have create correct decrease counter action', () => {
     expect(decreaseCounter).toEqual({ type: DECREASE_COUNTER });
   });
 

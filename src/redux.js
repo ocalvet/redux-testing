@@ -7,7 +7,7 @@ export const increaseCounter = { type: INCREASE_COUNTER };
 export const decreaseCounter = { type: DECREASE_COUNTER };
 
 export const counter = (state = 0, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case INCREASE_COUNTER:
       return ++state;
     case DECREASE_COUNTER:
