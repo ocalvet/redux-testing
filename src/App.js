@@ -18,9 +18,11 @@ export class App extends Component {
     const { count } = this.props;
     return (
       <div className="App">
-        <h1 className="title">Counter ({count})</h1>
-        <button onClick={this.increaseCounter}>Increase</button>
-        <button onClick={this.decreaseCounter}>Decrease</button>
+        <div>
+          <h1 className="title">Counter ({count})</h1>
+          <button onClick={this.increaseCounter}>Increase</button>
+          <button onClick={this.decreaseCounter}>Decrease</button>
+        </div>
       </div>
     );
   }
