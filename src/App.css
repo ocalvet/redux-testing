@@ -5,3 +5,13 @@
   justify-content: center;
   height: 100vh;
 }
+
+.App > div {
+  text-align: center;
+}
+
+.actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

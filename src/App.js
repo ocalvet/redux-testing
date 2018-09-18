@@ -20,8 +20,10 @@ export class App extends Component {
       <div className="App">
         <div>
           <h1 className="title">Counter ({count})</h1>
-          <button onClick={this.increaseCounter}>Increase</button>
-          <button onClick={this.decreaseCounter}>Decrease</button>
+          <div className="actions">
+            <button onClick={this.increaseCounter}>Increase</button>
+            <button onClick={this.decreaseCounter}>Decrease</button>
+          </div>
         </div>
       </div>
     );
